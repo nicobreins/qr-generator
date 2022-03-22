@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR genrator</title>
+    <link rel="icon" type="image/x-icon" href="qr-code.png">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Poppins:wght@300;600&family=Rubik:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="card-container">
+            <div class="qr-container">
+                <img src="qr-code.png" alt="QR" id="qr-img">
+                <div id="loader">
+                    <img src="Blocks-1s-200px (1).gif" alt="loader">
+                </div>
+            </div>
+            <span id="qr-content"></span>
+            
+            <label for="content-in">Enter Content</label>
+            <input type="text" id="content-in" placeholder="Max 200 characters">
+            <span id="error-msg"></span>
+            <button id="submit">Generate QR</button>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

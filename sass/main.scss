@@ -1,0 +1,129 @@
+body{
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;
+
+    --light-blue: #d5e1ef;
+    --blue: #2c7df9;
+
+    --dark-blue:#38414e;
+    --light-grey:#b9bcc1;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card-container{
+        max-width: 50ch;
+        background-color: #fff;
+        border-radius: 1em;
+        box-shadow: 0 0 9px var(--light-grey);
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        .qr-container{
+            height: 50ch;
+            width: 50ch;
+            border-radius: 1em;            
+            background-color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            #loader{
+                position: absolute;
+                inset: 0 0 0 0;
+                background-color: rgba(255, 255, 255, 0.325);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                display: none;
+                z-index: 99;
+
+                img{
+                    width: 150px;
+                }
+                
+            }
+        }
+
+        #qr-content{
+            overflow-wrap: break-word;
+            background-color: var(--light-blue);
+            padding: 1em;
+            border-radius: .7em;
+            display: none;
+        }
+
+        label{
+            margin-bottom: -1em;
+        }
+
+        input, button{
+            padding: .7em 1em ;
+            border-radius: .5em;
+            font-size: 1em;
+        }
+
+        #qr-img{
+            width: 250px;
+            height: 250px;
+            filter: invert(1);
+        }
+
+        input{
+            outline-color: var(--blue);
+            border: 1px solid var(--light-grey);
+           
+        }
+
+        #error-msg{
+            color: red;
+            text-align: right;
+            font-size: .95em;
+            margin-top: -1em;
+            display: none;
+        }
+
+        button{
+            border: none;
+            background-color: var(--blue);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #1a66da;
+            }
+        }
+    }
+}
+
+
+
+.grid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    .box{
+        width: 12.5px;
+        height: 12.5px;
+        background-color: var(--blue);
+        // position: absolute;
+    }
+
+}

@@ -1,0 +1,109 @@
+body {
+  margin: 0%;
+  font-family: "Poppins", sans-serif;
+  --light-blue: #d5e1ef;
+  --blue: #2c7df9;
+  --dark-blue:#38414e;
+  --light-grey:#b9bcc1;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .card-container {
+  max-width: 50ch;
+  background-color: #fff;
+  border-radius: 1em;
+  box-shadow: 0 0 9px var(--light-grey);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .card-container .qr-container {
+  height: 50ch;
+  width: 50ch;
+  border-radius: 1em;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .card-container .qr-container #loader {
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: rgba(255, 255, 255, 0.325);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 99;
+}
+main .card-container .qr-container #loader img {
+  width: 150px;
+}
+main .card-container #qr-content {
+  overflow-wrap: break-word;
+  background-color: var(--light-blue);
+  padding: 1em;
+  border-radius: 0.7em;
+  display: none;
+}
+main .card-container label {
+  margin-bottom: -1em;
+}
+main .card-container input, main .card-container button {
+  padding: 0.7em 1em;
+  border-radius: 0.5em;
+  font-size: 1em;
+}
+main .card-container #qr-img {
+  width: 250px;
+  height: 250px;
+  filter: invert(1);
+}
+main .card-container input {
+  outline-color: var(--blue);
+  border: 1px solid var(--light-grey);
+}
+main .card-container #error-msg {
+  color: red;
+  text-align: right;
+  font-size: 0.95em;
+  margin-top: -1em;
+  display: none;
+}
+main .card-container button {
+  border: none;
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+main .card-container button:hover {
+  background-color: #1a66da;
+}
+
+.grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid .box {
+  width: 12.5px;
+  height: 12.5px;
+  background-color: var(--blue);
+}
+
+/*# sourceMappingURL=main.css.map */
