@@ -28,7 +28,7 @@ function fetchData(){
         contentEl.style.display = 'block'
         contentEl.innerText = inputEl.value
         inputEl.value = ''
-        createGrid()
+        gridLoader()
    
     }else if(inputEl.value == ''){
         showError('Field can not be empty')
@@ -47,8 +47,9 @@ inputEl.onkeydown = (e)=>{
      }
 }
 
-function createGrid(){
-    let grid = document.querySelector('.grid')
+function gridLoader(){
+    let grid = document.querySelector('.grid');
+
     if(grid){
         grid.remove();
     }
@@ -66,21 +67,18 @@ function createGrid(){
         pixel.id = 'box-' + id ;
     }
     
-    for(let i=0; i < 400; i++){
-        addPixel(i)
-    }
-    
-    const boxes = Array.from(document.querySelectorAll('.box'))
-
     const numberList = []
 
     for(let i = 0; i < 400; i++){
+        addPixel(i)
         numberList.push(i)
     }
-
+    
     let randomArr = numberList.sort(() => 0.5 - Math.random());
 
     loader.style.display = 'flex';
+
+    const boxes = Array.from(document.querySelectorAll('.box'))
 
     const removeBoxes = setInterval(() => {
         if(randomArr.length){
